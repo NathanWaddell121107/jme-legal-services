@@ -1,0 +1,8 @@
+node_modules
+.next
+dist
+.vercel
+.vscode
+.github
+*.css
+next-env.d.ts
