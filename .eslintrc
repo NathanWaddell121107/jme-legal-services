@@ -1,0 +1,70 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"plugin:@next/next/recommended"
+	],
+	"overrides": [
+		{
+			"files": ["*.js"],
+			"rules": {
+				"@typescript-eslint/no-var-requires": "off"
+			}
+		}
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"extraFileExtensions": [".json"],
+		"project": "./tsconfig.eslint.json",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"react",
+		"react-hooks",
+		"simple-import-sort",
+		"sort-keys-fix"
+	],
+	"rules": {
+		"@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-explicit-any": "error",
+		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{ "argsIgnorePattern": "^_" }
+		],
+		"no-console": 1,
+		"no-var": "error",
+		"react-hooks/exhaustive-deps": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react/display-name": "off",
+		"react/prop-types": "off",
+		"simple-import-sort/exports": "error",
+		"simple-import-sort/imports": [
+			"error",
+			{
+				// Move react and next first and remove blank lines between groups
+				"groups": [["^\\u0000", "^react", "^next", "^@?\\w", "^", "^\\."]]
+			}
+		],
+		"sort-keys-fix/sort-keys-fix": "error",
+		"sort-vars": "error"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
