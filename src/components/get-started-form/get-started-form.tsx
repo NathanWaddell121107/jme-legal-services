@@ -8,10 +8,10 @@ interface Props {
 }
 
 const GetStartedForm: React.FC<Props> = ({ notification, setNotification }) => {
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-	const [phone, setPhone] = useState('')
-	const [message, setMessage] = useState('')
+	const [, setName] = useState('')
+	const [, setEmail] = useState('')
+	const [, setPhone] = useState('')
+	const [, setMessage] = useState('')
 
 	useEffect(() => {
 		setTimeout(() => {
