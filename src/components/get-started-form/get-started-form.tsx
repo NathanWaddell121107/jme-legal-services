@@ -21,37 +21,40 @@ const GetStartedForm: React.FC<Props> = ({ notification, setNotification }) => {
 
 	const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-		const formSubmission = {
-			email,
-			message,
-			name,
-			phone
-		}
 
-		const data = await fetch(`${window.location.origin}/api/submission`, {
-			body: JSON.stringify(formSubmission),
-			headers: { 'Content-Type': 'application/json' },
-			method: 'POST'
-		})
+		// TODO: we need a honeypot & required fields before setting this live. for now, just return...
 
-		const result = await data.json()
-		if (!result.success)
-			setNotification({
-				message:
-					'There was an error submitting your information, please try again later',
-				type: 'error'
-			})
-		else {
-			setName('')
-			setEmail('')
-			setPhone('')
-			setMessage('')
-			setNotification({
-				message:
-					'Thanks! Your information was submitted and we will contact you soon',
-				type: 'success'
-			})
-		}
+		// const formSubmission = {
+		// 	email,
+		// 	message,
+		// 	name,
+		// 	phone
+		// }
+
+		// const data = await fetch(`${window.location.origin}/api/submission`, {
+		// 	body: JSON.stringify(formSubmission),
+		// 	headers: { 'Content-Type': 'application/json' },
+		// 	method: 'POST'
+		// })
+
+		// const result = await data.json()
+		// if (!result.success)
+		// 	setNotification({
+		// 		message:
+		// 			'There was an error submitting your information, please try again later',
+		// 		type: 'error'
+		// 	})
+		// else {
+		// 	setName('')
+		// 	setEmail('')
+		// 	setPhone('')
+		// 	setMessage('')
+		// 	setNotification({
+		// 		message:
+		// 			'Thanks! Your information was submitted and we will contact you soon',
+		// 		type: 'success'
+		// 	})
+		// }
 	}
 
 	return (
