@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+// import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { NotificationType } from '../../types/notification'
 
 interface Props {
@@ -82,7 +82,7 @@ const GetStartedForm: React.FC<Props> = ({ notification, setNotification }) => {
 							</div>
 							<div className="mt-6">
 								<dt className="sr-only">Phone number</dt>
-								<dd className="flex">
+								{/* <dd className="flex">
 									<PhoneIcon
 										className="flex-shrink-0 h-6 w-6 text-gray-400"
 										aria-hidden="true"
@@ -99,11 +99,11 @@ const GetStartedForm: React.FC<Props> = ({ notification, setNotification }) => {
 									>
 										(870) 351-4508
 									</a>
-								</dd>
+								</dd> */}
 							</div>
 							<div className="mt-3">
 								<dt className="sr-only">Email</dt>
-								<dd className="flex">
+								{/* <dd className="flex">
 									<MailIcon
 										className="flex-shrink-0 h-6 w-6 text-gray-400"
 										aria-hidden="true"
@@ -114,7 +114,7 @@ const GetStartedForm: React.FC<Props> = ({ notification, setNotification }) => {
 									>
 										jmelegalservices@gmail.com
 									</a>
-								</dd>
+								</dd> */}
 							</div>
 						</dl>
 					</div>
