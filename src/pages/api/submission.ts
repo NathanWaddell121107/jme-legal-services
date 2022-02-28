@@ -33,7 +33,6 @@ const submission = async (
 		to: 'waddellnathan1211@gmail.com'
 	}
 
-	console.log('env: ', process.env.emailPassword, process.env.emailSender)
 	transporter.sendMail(mailOptions, (err, info) => {
 		if (err) {
 			console.log('something went wrong sending the email: ', err)
